@@ -61,6 +61,10 @@ const score = groups[1].split('\n').map((row) => {
     .split(' ')
     .filter((subRow) => subRow !== '');
 
+  if (amount === undefined) {
+    return;
+  }
+
   const stack = [];
   for (let i = 0; i < Number(amount); i++) {
     const poped = stacks[from].pop();
